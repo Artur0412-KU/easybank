@@ -1,0 +1,63 @@
+.header {
+    &-container {
+        &__nav {
+            &--mobile {
+                display: none;
+
+                &__active {
+                    @media (max-width: $mobile) {
+                    background-color: #fff;
+                    position: fixed;
+                    display: flex;
+                    justify-content: start;
+                    flex-direction: column;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    padding: 40px 20px;
+                    width: 100vh; 
+                    height: 100vh; 
+                    gap: 40px;
+
+                    ul {
+                        a {
+                            color: $grayish-blue;
+                            transition: color .2s ease-in;
+
+                            &:hover {
+                                color: $lime-green;
+
+                            }
+                        }
+                    }
+
+                    &__btn {
+                   width: 50%;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   border: none;
+                   padding: 15px 30px;
+                   background: $lime-blue-gradient;
+                   color: $white;
+                   font-weight: $fw-700;
+                   font-size: 15px;
+                   border-radius: 40px;
+                   transform: opacity .3s ease-in-out;
+
+                    &:hover {
+                        opacity: .5;
+                
+                    }
+                }
+                }
+                }
+
+                
+
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.section-3 {
+    padding: 70px;
+    background-color: $very-light-gray;
+
+    @media (max-width: $mobile) {
+        padding: 30px;
+    }
+
+    &-container {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+
+        @media (max-width: $mobile) {
+            align-items: center;
+        }
+
+        &__title {
+            font-size: 36px;
+            font-weight: $fw-400;
+            color: $dark-blue;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(4,25%);
+            gap: 20px;
+
+            @media(max-width: $tablet) {
+                grid-template-columns: repeat(2,50%);
+            }
+
+            @media (max-width: $mobile) {
+                gap: 40px;
+            }
+
+            @media (max-width: $mobile) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &-card {
+                border-radius: 5px;
+                background-color: $white;
+                &-img {
+                    border-radius: 5px 5px 0 0;
+                    width: 100%;
+                    height: 50%;
+                    object-fit: cover;
+                }
+
+                &-description {
+                    padding: 20px;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    p {
+                        font-size: 14px;
+                        color: $grayish-blue;
+                    }
+
+                    h1 {
+                        font-size: 24px;
+                        font-weight: $fw-400;
+                        color: $dark-blue;
+                        transition: color .2s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                          color: $lime-green;
+                        }
+                    }
+
+                    
+
+                    h3 {
+                        font-weight: $fw-300;
+                        font-size: 18px;
+                        color: $grayish-blue;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

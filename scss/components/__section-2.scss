@@ -1,0 +1,79 @@
+.section-2 {
+    padding: 100px 70px;
+    background-color: $light-grayish-blue;
+
+    @media (max-width: $mobile) {
+        padding: 30px;
+    }
+
+    &-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+
+        &__text {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 30px;
+
+            @media (max-width: $mobile) {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 36px;
+                font-weight: $fw-400;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: $fw-300;
+                color: $grayish-blue;
+            }
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            justify-content: space-between;
+            gap: 40px;
+
+            @media (max-width: $tablet) {
+                grid-template-columns: repeat(2, 50%);
+            }
+
+            @media (max-width: $mobile) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &-card {
+               display: flex;
+               align-items: flex-start;
+               flex-direction: column;
+               gap: 40px;
+
+               @media (max-width: $mobile) {
+                   align-items: center;
+                   justify-content: center;
+                   text-align: center;
+               }
+
+               h1 {
+                  font-weight: $fw-400;
+                  color: $dark-blue;
+               } 
+
+               p {
+                color: $grayish-blue;
+                max-width: 300px;
+               }
+            }
+        }
+    }
+}

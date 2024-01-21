@@ -1,0 +1,108 @@
+.section-1 {
+    position: relative;
+    background-image: url('../images/bg-intro-desktop.svg');
+    background-color: $very-light-gray;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top -50px;
+    overflow: hidden;
+    padding-left: 70px;
+    // height: 700px;
+
+    @media(max-width: $tablet) {
+        background: url('../images/bg-intro-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+        position: relative;
+        padding: 0;
+        padding-bottom: 70px;
+    }
+ 
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 200px;
+
+        @media(max-width: $tablet) {
+            flex-direction: column-reverse;
+            gap: 70px;
+        }
+
+        @media(max-width: $mobile) {
+            gap: 40px;
+        } 
+
+        &__right {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+
+            @media(max-width: $tablet) {
+                text-align: center;
+                align-items: center;
+            }
+
+            @media(max-width: $mobile) {
+                padding: 20px;
+            } 
+            
+            h1 {
+                font-size: 48px;
+                font-weight: $fw-300;
+                color: $dark-blue;
+                max-width: 400px;
+
+                @media(max-width: $mobile) {
+                    font-size: 32px;
+                } 
+            }
+
+            h3 {
+               font-size: 18px;
+               font-weight: $fw-300;
+               color: $grayish-blue;
+               max-width: 400px;
+
+               @media(max-width: $mobile) {
+                 font-size: 16px;
+               } 
+            }
+
+            &__button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                padding: 15px 30px;
+                background: $lime-blue-gradient;
+                color: $white;
+                font-weight: $fw-700;
+                font-size: 15px;
+                border-radius: 40px;
+                transform: opacity .3s ease-in-out;
+
+                &:hover {
+                    opacity: .5;
+                
+                }
+            }
+        }
+
+        &__left {
+            
+
+           img {
+              width: 100vh;
+
+              @media(max-width: $mobile) {
+                width: 100%;
+              }
+           }
+        }
+    }
+}
